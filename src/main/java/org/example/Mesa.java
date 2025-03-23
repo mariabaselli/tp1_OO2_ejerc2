@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Mesa {
 
+    //------------------------------- ATRIBUTOS -------------------------------
     static final String ERROR_NUMERO_MESA = "Ya supero la creación de 10 mesas";
     private static final int CANTIDAD_MESAS_TOTALES = 10;
     private static int cantidadMesasCreadas = 0;
@@ -12,6 +13,8 @@ public class Mesa {
     private ArrayList<ItemMenu> listaDePlatos;
     private float precioTotalBebidas;
     private float precioTotalPlatos;
+
+    //----------------------------- CONSTRUCTORES -----------------------------
 
     private Mesa(int numero) {
         this.listaDeBebidas = new ArrayList<>();
@@ -25,6 +28,8 @@ public class Mesa {
             cantidadMesasCreadas++;
         }
     }
+
+    //-------------------------------- MÉTODOS --------------------------------
 
     static Mesa crearMesa(int numero) {
         assertCantidadMesas(numero);
@@ -50,7 +55,6 @@ public class Mesa {
         }
 
     }
-
 
     int cantidadPlatos() {
         return listaDePlatos.size();
